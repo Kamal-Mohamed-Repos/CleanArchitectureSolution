@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3508" viewBox="0 0 2480 3508">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="55%" stop-color="#111C33"/>
+      <stop offset="100%" stop-color="#0A0F1E"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="60%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="t"/>
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 0.6
+                0 0 0 0 0.7
+                0 0 0 0 0.9
+                0 0 0 0.05 0" in="t" result="t2"/>
+      <feBlend in="SourceGraphic" in2="t2" mode="overlay"/>
+    </filter>
+
+    <style>
+      .h1 { font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight: 800; letter-spacing: -0.4px; }
+      .h2 { font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: 0.2px; }
+      .p  { font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight: 520; letter-spacing: 0.15px; }
+      .mono { font-family: JetBrains Mono, Consolas, Menlo, monospace; font-weight: 650; letter-spacing: 0.6px; }
+      .small { font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-weight: 520; letter-spacing: 0.2px; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="2480" height="3508" fill="url(#bg)"/>
+  <rect x="0" y="0" width="2480" height="3508" filter="url(#noise)" opacity="0.9"/>
+
+  <rect x="0" y="0" width="2480" height="20" fill="url(#accent)" opacity="0.95"/>
+  <rect x="0" y="3488" width="2480" height="20" fill="url(#accent)" opacity="0.95"/>
+
+  <!-- Blue line area: x=2298..2310 -->
+  <rect x="2298" y="260" width="12" height="2988" fill="url(#accent)" opacity="0.9"/>
+
+  <g transform="translate(230, 380)">
+    <text x="0" y="0" class="h1" font-size="96" fill="#EAF2FF">Über dieses Buch</text>
+    <rect x="0" y="42" width="980" height="10" fill="url(#accent)" opacity="0.9"/>
+  </g>
+
+  <g transform="translate(230, 560)">
+    <text class="p" font-size="44" fill="#CFE2FF" opacity="0.98">
+      <tspan x="0" y="0">Clean Architecture ist mehr als eine Ordnerstruktur:</tspan>
+      <tspan x="0" y="64">Es ist ein Architekturansatz, der Abhängigkeiten kontrolliert</tspan>
+      <tspan x="0" y="128">und Systeme langfristig wartbar, testbar und erweiterbar macht.</tspan>
+    </text>
+
+    <text class="p" font-size="44" fill="#CFE2FF" opacity="0.98">
+      <tspan x="0" y="240">Dieses Buch zeigt Clean Architecture in .NET praxisnah mit CQRS</tspan>
+      <tspan x="0" y="304">und MediatR – Schritt für Schritt, verständlich und direkt am Code.</tspan>
+    </text>
+
+    <text class="p" font-size="44" fill="#CFE2FF" opacity="0.98">
+      <tspan x="0" y="420">Als roter Faden dient das reale GitHub-Projekt</tspan>
+      <tspan x="0" y="484">„CleanArchitectureSolution“.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(230, 1250)">
+    <text x="0" y="0" class="h2" font-size="62" fill="#EAF2FF">Du lernst unter anderem:</text>
+    <rect x="0" y="22" width="1180" height="6" fill="url(#accent)" opacity="0.85"/>
+
+    <g transform="translate(0, 95)">
+      <circle cx="14" cy="16" r="10" fill="#5EEAD4"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">Schichten sauber schneiden (Domain, Application, Infrastructure, WebAPI)</text>
+      <g transform="translate(0, 80)">
+        <circle cx="14" cy="16" r="10" fill="#60A5FA"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">CQRS korrekt modellieren (Commands, Queries, Handler)</text>
+      </g>
+      <g transform="translate(0, 160)">
+        <circle cx="14" cy="16" r="10" fill="#A78BFA"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">MediatR als Use-Case-Orchestrierung + Pipeline Behaviors nutzen</text>
+      </g>
+      <g transform="translate(0, 240)">
+        <circle cx="14" cy="16" r="10" fill="#5EEAD4"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">Validierung mit FluentValidation zentral und konsistent umsetzen</text>
+      </g>
+      <g transform="translate(0, 320)">
+        <circle cx="14" cy="16" r="10" fill="#60A5FA"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">EF Core in der Infrastructure kapseln und über Interfaces anbinden</text>
+      </g>
+      <g transform="translate(0, 400)">
+        <circle cx="14" cy="16" r="10" fill="#A78BFA"/><text x="44" y="30" class="p" font-size="44" fill="#D6E6FF">Eine WebAPI bauen, die stabil bleibt – auch wenn Technik sich ändert</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(230, 2320)">
+    <rect x="0" y="0" width="2020" height="150" rx="22" fill="#0E1730" opacity="0.75" stroke="#2A3A66" stroke-width="2"/>
+    <text x="36" y="62" class="mono" font-size="34" fill="#D6E6FF" opacity="0.96">Praxisprojekt (GitHub):</text>
+    <text x="36" y="112" class="mono" font-size="34" fill="#8BE6FF" opacity="0.96">.../CleanArchitectureSolution</text>
+  </g>
+
+  <g transform="translate(230, 2680)">
+    <text x="0" y="0" class="h2" font-size="56" fill="#EAF2FF" opacity="0.97">Dipl.-Inf. Kamal Mohamed</text>
+    <text x="0" y="60" class="small" font-size="34" fill="#AFC7FF" opacity="0.97">Softwarearchitektur • .NET • Clean Code</text>
+
+    <!-- moved to be LEFT of the blue line with 20px gap -->
+    <g transform="translate(1168, -10)">
+      <rect x="0" y="0" width="880" height="520" rx="18" fill="#0E1730" opacity="0.75" stroke="#2A3A66" stroke-width="2"/>
+      <text x="40" y="70" class="mono" font-size="30" fill="#D6E6FF" opacity="0.9">BARCODE / ISBN</text>
+      <rect x="40" y="110" width="800" height="360" fill="#0B1220" opacity="0.85" stroke="#2A3A66" stroke-width="2"/>
+      <g transform="translate(60, 140)" opacity="0.85">
+        <rect x="0" y="0" width="8" height="300" fill="#EAF2FF"/>
+        <rect x="18" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="30" y="0" width="12" height="300" fill="#EAF2FF"/>
+        <rect x="52" y="0" width="4" height="300" fill="#EAF2FF"/>
+        <rect x="66" y="0" width="9" height="300" fill="#EAF2FF"/>
+        <rect x="88" y="0" width="2" height="300" fill="#EAF2FF"/>
+        <rect x="100" y="0" width="14" height="300" fill="#EAF2FF"/>
+        <rect x="122" y="0" width="6" height="300" fill="#EAF2FF"/>
+        <rect x="142" y="0" width="10" height="300" fill="#EAF2FF"/>
+        <rect x="164" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="176" y="0" width="16" height="300" fill="#EAF2FF"/>
+        <rect x="198" y="0" width="5" height="300" fill="#EAF2FF"/>
+        <rect x="216" y="0" width="11" height="300" fill="#EAF2FF"/>
+        <rect x="240" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="252" y="0" width="13" height="300" fill="#EAF2FF"/>
+        <rect x="274" y="0" width="4" height="300" fill="#EAF2FF"/>
+        <rect x="288" y="0" width="9" height="300" fill="#EAF2FF"/>
+        <rect x="308" y="0" width="2" height="300" fill="#EAF2FF"/>
+        <rect x="320" y="0" width="15" height="300" fill="#EAF2FF"/>
+        <rect x="344" y="0" width="6" height="300" fill="#EAF2FF"/>
+        <rect x="364" y="0" width="10" height="300" fill="#EAF2FF"/>
+        <rect x="386" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="398" y="0" width="16" height="300" fill="#EAF2FF"/>
+        <rect x="422" y="0" width="5" height="300" fill="#EAF2FF"/>
+        <rect x="440" y="0" width="11" height="300" fill="#EAF2FF"/>
+        <rect x="462" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="474" y="0" width="14" height="300" fill="#EAF2FF"/>
+        <rect x="496" y="0" width="4" height="300" fill="#EAF2FF"/>
+        <rect x="510" y="0" width="9" height="300" fill="#EAF2FF"/>
+        <rect x="530" y="0" width="2" height="300" fill="#EAF2FF"/>
+        <rect x="542" y="0" width="16" height="300" fill="#EAF2FF"/>
+        <rect x="566" y="0" width="6" height="300" fill="#EAF2FF"/>
+        <rect x="586" y="0" width="10" height="300" fill="#EAF2FF"/>
+        <rect x="608" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="620" y="0" width="16" height="300" fill="#EAF2FF"/>
+        <rect x="644" y="0" width="5" height="300" fill="#EAF2FF"/>
+        <rect x="662" y="0" width="11" height="300" fill="#EAF2FF"/>
+        <rect x="684" y="0" width="3" height="300" fill="#EAF2FF"/>
+        <rect x="696" y="0" width="14" height="300" fill="#EAF2FF"/>
+        <rect x="718" y="0" width="4" height="300" fill="#EAF2FF"/>
+        <rect x="732" y="0" width="9" height="300" fill="#EAF2FF"/>
+      </g>
+    </g>
+  </g>
+</svg>
